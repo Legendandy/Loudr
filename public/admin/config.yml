@@ -2,7 +2,7 @@ backend:
   name: github
   repo: Legendandy/Loudr
   branch: main
-  base_url: https://loudr.vercel.app
+  base_url: https://loudr-chi.vercel.app
   auth_endpoint: api/decap/auth
 local_backend: true
 site_url: https://loudr.me

@@ -27,7 +27,7 @@ For production:
 
 1. Push this project to your GitHub repository.
 2. The production repository is configured as `Legendandy/Loudr` in `public/admin/config.yml`.
-3. Create a GitHub OAuth App whose callback is `https://loudr.vercel.app/api/decap/callback`, then add its client ID and secret to Vercel as `GITHUB_OAUTH_CLIENT_ID` and `GITHUB_OAUTH_CLIENT_SECRET`. Never add the client secret to the public config.
+3. Create a GitHub OAuth App whose callback is `https://loudr-chi.vercel.app/api/decap/callback`, then add its client ID and secret to Vercel as `GITHUB_OAUTH_CLIENT_ID` and `GITHUB_OAUTH_CLIENT_SECRET`. Never add the client secret to the public config.
 4. Connect the GitHub repository to Vercel. Commits made through Decap will trigger fresh site builds.
 5. Publish an article through the editor and verify the new deployment before launch.
 
