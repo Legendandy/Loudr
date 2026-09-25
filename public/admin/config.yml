@@ -1,0 +1,27 @@
+backend:
+  name: github
+  repo: Legendandy/Loudr
+  branch: main
+  base_url: https://loudr.vercel.app
+  auth_endpoint: api/decap/auth
+local_backend: true
+site_url: https://loudr.me
+display_url: https://loudr.me
+media_folder: public/uploads
+public_folder: /uploads
+collections:
+  - name: blog
+    label: Blog posts
+    folder: content/blog
+    create: true
+    slug: '{{slug}}'
+    summary: '{{title}}'
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Category, name: category, widget: string }
+      - { label: Publish date, name: date, widget: datetime }
+      - { label: Featured image, name: image, widget: image }
+      - { label: Short excerpt, name: excerpt, widget: text }
+      - { label: Author, name: author, widget: string, required: false }
+      - { label: Draft, name: draft, widget: boolean, default: true }
+      - { label: Body, name: body, widget: markdown }

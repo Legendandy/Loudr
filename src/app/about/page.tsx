@@ -1,0 +1,3 @@
+import { CTA } from '@/components/shell';
+export const metadata={title:'About'};
+export default function About(){return <main id="main" className="container page-main"><span className="eyebrow">INDEPENDENT MUSIC. MORE POSSIBILITIES.</span><h1 className="page-heading">Helping more<br/>music get <span className="lime">heard.</span></h1><div className="about-body"><p>Loudr helps artists reach more potential listeners on TikTok by increasing the number of posts using their music.</p><p>We use multiple real TikTok accounts to create and publish content using an artist’s sound, helping build more activity around the music and giving more people opportunities to discover it.</p><p>Campaigns are human-powered and available for music across all genres.</p><CTA/></div></main>}
