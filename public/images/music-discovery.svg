@@ -1,1 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500"><rect width="800" height="500" fill="#caff57"/><g fill="none" stroke="#233116" stroke-width="2" opacity=".4"><circle cx="690" cy="350" r="110"/><circle cx="690" cy="350" r="140"/><circle cx="690" cy="350" r="170"/><circle cx="690" cy="350" r="200"/><circle cx="690" cy="350" r="230"/><circle cx="690" cy="350" r="260"/><circle cx="690" cy="350" r="290"/></g><g fill="#19250e" font-family="Arial,sans-serif" font-weight="900"><text x="55" y="80" font-size="23">LOUDR ↗</text><text x="50" y="255" font-size="91" letter-spacing="-6">MORE MUSIC.</text><text x="50" y="343" font-size="91" letter-spacing="-6">MORE DISCOVERY.</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#caff57"/>
+  <g fill="none" stroke="#233116" stroke-width="2" opacity=".4">
+    <circle cx="690" cy="350" r="110"/><circle cx="690" cy="350" r="140"/>
+    <circle cx="690" cy="350" r="170"/><circle cx="690" cy="350" r="200"/>
+    <circle cx="690" cy="350" r="230"/><circle cx="690" cy="350" r="260"/>
+    <circle cx="690" cy="350" r="290"/>
+  </g>
+  <g fill="#19250e" font-family="Arial,sans-serif" font-weight="900">
+    <text x="55" y="80" font-size="23">LOUDR</text>
+    <text x="50" y="255" font-size="91" letter-spacing="-6">MORE MUSIC.</text>
+    <text x="50" y="343" font-size="91" letter-spacing="-6">MORE DISCOVERY.</text>
+  </g>
+  <path d="M145 58h18v18M163 58l-22 22" fill="none" stroke="#19250e" stroke-width="4"/>
+</svg>

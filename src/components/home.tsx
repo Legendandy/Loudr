@@ -5,6 +5,7 @@ import {
   ArrowLeft,
   ArrowRight,
   ArrowUpRight,
+  Asterisk,
   AudioLines,
   Check,
   CheckCheck,
@@ -15,6 +16,7 @@ import {
   Plus,
   Send,
   Sparkles,
+  Star,
   Users,
   Volume2,
 } from "lucide-react";
@@ -228,7 +230,7 @@ function Visual({ type }: { type: string }) {
             </span>
             <span>Your music</span>
             <ArrowRight />
-            <b>LOUDR ↗</b>
+            <b>LOUDR <ArrowUpRight size={18} /></b>
             <Check className="lime" />
           </div>
           <span className="visual-note">
@@ -569,7 +571,7 @@ function FAQ() {
                   {i === 11 && (
                     <>
                       {" "}
-                      <a href="/contact">Contact us ↗</a>
+                      <a href="/contact">Contact us <ArrowUpRight size={14} /></a>
                     </>
                   )}
                 </p>
@@ -650,12 +652,10 @@ function Testimonials() {
                       </div>
                       <span className="quote-mark">“</span>
                     </div>
-                    <span
-                      className="stars"
-                      aria-label={`${review.rating} out of 5 stars`}
-                    >
-                      {"★".repeat(review.rating)}
-                      {"☆".repeat(5 - review.rating)}
+                    <span className="stars" aria-label={`${review.rating} out of 5 stars`}>
+                      {Array.from({ length: 5 }, (_, star) => (
+                        <Star key={star} className={star < review.rating ? "filled" : ""} aria-hidden="true" />
+                      ))}
                     </span>
                     <p>“{review.text}”</p>
                   </article>
@@ -756,7 +756,7 @@ function ProofCards() {
                 <span>{label}</span>
               </div>
               <span className="proof-card-mark" aria-hidden="true">
-                {i === 0 ? "↗" : i === 1 ? "◉" : i === 2 ? "≋" : "✳"}
+                {i === 0 ? <ArrowUpRight /> : i === 1 ? <Disc3 /> : i === 2 ? <AudioLines /> : <Asterisk />}
               </span>
             </article>
           ))}
@@ -898,7 +898,7 @@ export default function Home() {
               ].map((t) => (
                 <span key={t}>
                   {t}
-                  <i>✳</i>
+                  <i><Asterisk aria-hidden="true" /></i>
                 </span>
               ))}
             </div>
@@ -929,9 +929,7 @@ export default function Home() {
           to discover your sound.
         </p>
         <CTA />
-        <span className="cta-star" aria-hidden="true">
-          ✳
-        </span>
+        <span className="cta-star" aria-hidden="true"><Asterisk /></span>
       </section>
     </main>
   );

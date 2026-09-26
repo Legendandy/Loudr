@@ -1,4 +1,32 @@
 import Link from 'next/link';
-import {getPosts,dateLabel} from '@/lib/posts';
-export const metadata={title:'The Loudr blog',description:'Simple guides to TikTok music promotion and getting your sound ready for a campaign.'};
-export default function Blog(){const posts=getPosts();return <main id="main" className="container page-main"><h1 className="page-heading">The Loudr <span className="lime">blog.</span></h1><p className="page-lead">A little know-how for getting your music out there.</p><div className="blog-grid">{posts.map(post=><Link className="blog-card" href={`/blog/${post.slug}`} key={post.slug}><img src={post.image} alt="" width={800} height={500}/><div className="blog-card-body"><span className="eyebrow">{post.category}</span><h2>{post.title}</h2><p>{post.excerpt}</p><time dateTime={post.date}>{dateLabel(post.date)} ↗</time></div></Link>)}</div>{posts.length===0&&<p>New articles are on the way.</p>}</main>}
+import { ArrowUpRight } from 'lucide-react';
+import { getPosts, dateLabel } from '@/lib/posts';
+
+export const metadata = {
+  title: 'The Loudr blog',
+  description: 'Simple guides to TikTok music promotion and getting your sound ready for a campaign.',
+};
+
+export default function Blog() {
+  const posts = getPosts();
+  return (
+    <main id="main" className="container page-main">
+      <h1 className="page-heading">The Loudr <span className="lime">blog.</span></h1>
+      <p className="page-lead">A little know-how for getting your music out there.</p>
+      <div className="blog-grid">
+        {posts.map((post) => (
+          <Link className="blog-card" href={`/blog/${post.slug}`} key={post.slug}>
+            <img src={post.image} alt="" width={800} height={500} />
+            <div className="blog-card-body">
+              <span className="eyebrow">{post.category}</span>
+              <h2>{post.title}</h2>
+              <p>{post.excerpt}</p>
+              <time dateTime={post.date}>{dateLabel(post.date)} <ArrowUpRight aria-hidden="true" /></time>
+            </div>
+          </Link>
+        ))}
+      </div>
+      {posts.length === 0 && <p>New articles are on the way.</p>}
+    </main>
+  );
+}

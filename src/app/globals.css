@@ -747,6 +747,11 @@ p {
   opacity: 0.13;
   transform: rotate(-6deg);
 }
+.proof-card-mark svg {
+  width: 90px;
+  height: 90px;
+  stroke-width: 1.5;
+}
 #how-it-works {
   position: relative;
   z-index: 2;
@@ -914,6 +919,9 @@ p {
   font-size: 11px;
 }
 .workflow b {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
   font-size: 18px;
   letter-spacing: -1px;
 }
@@ -1090,8 +1098,12 @@ p {
   padding-right: 35px;
 }
 .benefit-track i {
-  font-size: 23px;
+  display: inline-flex;
   font-style: normal;
+}
+.benefit-track i svg {
+  width: 23px;
+  height: 23px;
 }
 @keyframes benefit-marquee {
   to {
@@ -1566,10 +1578,16 @@ p {
 }
 .stars {
   color: var(--lime);
-  display: block;
-  font-size: 12px;
-  letter-spacing: 3px;
+  display: flex;
+  gap: 5px;
   margin: 15px 0 10px;
+}
+.stars svg {
+  width: 13px;
+  height: 13px;
+}
+.stars svg.filled {
+  fill: currentColor;
 }
 .testimonial p {
   font-size: 12px;
@@ -1661,6 +1679,11 @@ p {
   line-height: 1;
   transform: rotate(12deg);
 }
+.cta-star svg {
+  width: 220px;
+  height: 220px;
+  stroke-width: 1.25;
+}
 .footer {
   border-top: 1px solid var(--line);
   padding-block: 50px 25px;
@@ -1696,6 +1719,28 @@ p {
 }
 .footer-bottom > span:last-child {
   letter-spacing: 0.14em;
+}
+.footer-turn-up {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.footer-turn-up svg {
+  width: 12px;
+  height: 12px;
+}
+.blog-card time,
+.related a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.blog-card time svg,
+.related a svg,
+.text-link svg {
+  width: 1.15em;
+  height: 1.15em;
+  flex: 0 0 auto;
 }
 .socials {
   display: flex;
@@ -2518,6 +2563,10 @@ p {
     font-size: 52px;
     opacity: 0.08;
   }
+  .proof-card-mark svg {
+    width: 52px;
+    height: 52px;
+  }
   .section-intro {
     margin-bottom: 38px;
   }
@@ -2686,6 +2735,10 @@ p {
     right: 0;
     top: 50px;
     opacity: 0.2;
+  }
+  .cta-star svg {
+    width: 70px;
+    height: 70px;
   }
   .footer {
     padding-block: 35px 22px;
